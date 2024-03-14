@@ -1,0 +1,24 @@
+{
+  "name": "be-mean",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/be-mean/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "be-mean:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "be-mean:build:development"
+        },
+        "production": {
+          "buildTarget": "be-mean:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
