@@ -2,11 +2,14 @@
   "name": "@be-mean/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "npx nx serve be-mean"
+  },
   "private": true,
   "dependencies": {
     "axios": "^1.6.0",
     "express": "^4.18.1",
+    "mongoose": "^8.3.2",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
