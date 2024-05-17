@@ -46,13 +46,12 @@ app.post("/api/posts", (req, res, next) => {
 });
 
 app.get("/api/posts", (req, res, next) => {
-  console.log(Post.find().then(posts => {
-    console.log(posts);
+  Post.find({}, 'title content').then(posts => {
     res.send(posts.map(post => new Post({
       title: post.title,
       content: post.content
     })));
-  }));
+  });
 });
 
 const port = process.env.PORT || 3333;
